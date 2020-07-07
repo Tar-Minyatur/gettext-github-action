@@ -1,7 +1,6 @@
 name: 'Setup Gettext Action'
 description: 'Installs Gettext to prepare for .po to .mo conversion and more.'
 author: 'Tar-Minyatur'
-inputs: 
 runs:
   using: 'docker'
   image: 'Dockerfile'
