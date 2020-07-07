@@ -11,7 +11,7 @@ do
   msgfmt "$filename"
   returnValue=$?
   if [ $returnValue -ne 0 ]; then
-    ERRORS=$ERRORS+1
+    ERRORS=$((ERRORS+1))
     echo "contains errors!"
   else
     echo "ok"
