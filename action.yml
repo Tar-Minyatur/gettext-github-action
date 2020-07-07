@@ -1,5 +1,5 @@
-name: 'Gettext Transformation Action'
-description: 'Uses GNU gettext to convert .po files to .mo files.'
+name: 'Gettext Validation Action'
+description: 'Uses GNU gettext to verify that all .po files in a folder can be converted to .mo files.'
 author: 'Tar-Minyatur'
 inputs:
   folder:
