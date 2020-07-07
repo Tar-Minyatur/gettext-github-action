@@ -18,7 +18,7 @@ do
   fi
 done
 echo ""
-if [ $ERRORS -gt 1 ]; then  
+if [ $ERRORS -gt 0 ]; then  
   echo "FOUND $ERRORS ERROR(S) IN THE TRANSLATION FILES. SEE ABOVE FOR DETAILS."
   exit 1
 else
