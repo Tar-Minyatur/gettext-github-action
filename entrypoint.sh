@@ -1,12 +1,11 @@
-#!/bin/bash
+#!/bin/sh -l
 
 echo "Installing Gettext..."
 apk add gettext
 
 echo "Checking .po files in $1..."
 ERRORS=0
-shopt -s globstar
-for filename in "$1**.po"
+for filename in $(find $1 -type f -name \*.po)
 do
   echo -n "→ $filename..."
   msgfmt "$filename"
