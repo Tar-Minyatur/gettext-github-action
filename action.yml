@@ -1,6 +1,12 @@
-name: 'Setup Gettext Action'
-description: 'Installs Gettext to prepare for .po to .mo conversion and more.'
+name: 'Gettext Transformation Action'
+description: 'Uses GNU gettext to convert .po files to .mo files.'
 author: 'Tar-Minyatur'
+inputs:
+  folder:
+    description: "Folder containing the .po files"
+    default: ./
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.folder }}
