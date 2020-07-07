@@ -4,4 +4,4 @@ COPY LICENSE README.md /
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/bin/bash /entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
