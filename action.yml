@@ -1,12 +1,7 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'Setup Gettext Action'
+description: 'Installs Gettext to prepare for .po to .mo conversion and more.'
+author: 'Tar-Minyatur'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.myInput }}
