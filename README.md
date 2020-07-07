@@ -1,5 +1,20 @@
-# Container Action Template
+# Gettext Validation Action
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+This action allows automatic validation of Gettext .po files through GitHub workflows.
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+## Usage
+
+Add something like this to your GitHub workflows, e.g. in `.github/workflows/validation.yml`:
+
+    ---
+    name: Validate translation files
+    on: [push, pull_request]
+    jobs:
+      validate:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - name: Validate .po files
+            uses: Tar-Minyatur/gettext-validation@master
+            with:
+              folder: translations/
